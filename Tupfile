@@ -1,0 +1,9 @@
+.gitignore
+
+export PKG_CONFIG_PATH
+
+PACKAGES = webkit2gtk-3.0
+
+VALAFLAGS += --vapidir=vapi --pkg=webkit2gtk-3.0 -X -w
+
+: src/*.vala |> valac $(VALAFLAGS) %f -o %o |> rss-reader
