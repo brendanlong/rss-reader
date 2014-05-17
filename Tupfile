@@ -4,6 +4,6 @@ export PKG_CONFIG_PATH
 
 PACKAGES = webkit2gtk-3.0
 
-VALAFLAGS += --vapidir=vapi --pkg=webkit2gtk-3.0 -X -w
+VALAFLAGS += --vapidir=vapi --pkg=webkit2gtk-3.0 -X -w -X -DGETTEXT_PACKAGE=\"rssreader\"
 
 : src/*.vala |> valac $(VALAFLAGS) %f -o %o |> rss-reader
