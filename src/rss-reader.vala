@@ -4,6 +4,11 @@ public class RSS.Reader : Gtk.ApplicationWindow {
         title = _("RSS Reader");
         set_default_size(800, 600);
 
+        var header = new Gtk.HeaderBar();
+        header.title = title;
+        header.show_close_button = true;
+        set_titlebar(header);
+
         var container = new Gtk.Grid();
         var feed_list = new FeedList();
         container.attach(feed_list, 0, 0, 1, 1);
